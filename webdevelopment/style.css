@@ -3,7 +3,6 @@ body {
     font-family: Lato, sans-serif;
     margin: 0;
 }
-
 /* heading */
 h1 { 
     color: #14532D;
@@ -12,7 +11,7 @@ h1 {
 }
 /* paragraph */
 p {
-    color: #C97C5D;  
+    color: #14532D;  
     font-family: Lato, sans-serif;
     font-size: 20px;
     line-height: 1.6;
