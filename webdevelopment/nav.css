@@ -10,7 +10,7 @@ header {
 header nav { margin-left: auto; }
 
 .logo {
-  max-height: 110px;   
+  max-height: 110px;
   width: auto;
   height: auto;
   display: block;
@@ -18,10 +18,9 @@ header nav { margin-left: auto; }
 
 @media (max-width: 768px) {
   .logo {
-    max-height: 80px;  
+    max-height: 80px;
   }
 }
-
 
 /* Navigation layout */
 .nav-links {
