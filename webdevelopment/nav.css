@@ -10,10 +10,18 @@ header {
 header nav { margin-left: auto; }
 
 .logo {
-  height: 110px;
+  max-height: 110px;   
   width: auto;
+  height: auto;
   display: block;
 }
+
+@media (max-width: 768px) {
+  .logo {
+    max-height: 80px;  /* smaller on tablets & phones */
+  }
+}
+
 
 /* Navigation layout */
 .nav-links {
