@@ -170,21 +170,6 @@ footer { margin-top: 30px; }
   margin-bottom: 1rem;
 }
 
-/* keep lower part in view (book usually near bottom) */
-.banner-img { object-position: center 80%; }
-
-/* or: */
-.banner-img { object-position: center bottom; }
-
-/* or if the book is left side: */
-.banner-img { object-position: 20% 70%; }
-
-/* widen the reflection page only */
-.reflection-page main {
-  max-width: 1200px;
-  padding: 0 1.5rem;
-}
-
 /* stronger shadow + more spacing so it's visible */
 .reflection-box {
   box-shadow:
