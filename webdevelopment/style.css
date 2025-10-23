@@ -305,11 +305,12 @@ html { scroll-behavior: smooth; }
   }
 }
 
-.headshot-img {
-  width: min(280px, 90%);   
-  height: auto;
+.media-card .headshot-img {
+  width: 220px !important;
+  height: auto !important;
   display: block;
-  margin-inline: auto;      
-  border-radius: 0.75rem;   
+  margin: 0 auto;
+  border-radius: 0.75rem;
 }
+
 
