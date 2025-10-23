@@ -305,12 +305,11 @@ html { scroll-behavior: smooth; }
   }
 }
 
-/* === About page headshot size === */
 .headshot-img {
-  width: min(350px, 90%);   /* keeps it responsive but capped around 350px */
+  width: min(350px, 90%);   
   height: auto;
   display: block;
-  margin-inline: auto;      /* centers it */
-  border-radius: 0.75rem;   /* optional: soft rounded corners */
+  margin-inline: auto;      
+  border-radius: 0.75rem;   
 }
 
