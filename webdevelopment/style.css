@@ -306,7 +306,7 @@ html { scroll-behavior: smooth; }
 }
 
 .headshot-img {
-  width: min(350px, 90%);   
+  width: min(280px, 90%);   
   height: auto;
   display: block;
   margin-inline: auto;      
