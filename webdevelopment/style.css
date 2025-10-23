@@ -306,11 +306,12 @@ html { scroll-behavior: smooth; }
 }
 
 .media-card .headshot-img {
-  width: 220px !important;
+  width: 280px !important;   
   height: auto !important;
   display: block;
   margin: 0 auto;
   border-radius: 0.75rem;
 }
+
 
 
