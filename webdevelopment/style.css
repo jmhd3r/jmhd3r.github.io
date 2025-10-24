@@ -305,13 +305,12 @@ html { scroll-behavior: smooth; }
   }
 }
 
-.media-card .headshot-img {
-  width: 280px !important;   
+.media-card img.headshot-img {
+  width: 260px !important;   
+  max-width: 90% !important;
   height: auto !important;
   display: block;
-  margin: 0 auto;
+  margin: 0.75rem auto 1rem;
   border-radius: 0.75rem;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
 }
-
-
-
