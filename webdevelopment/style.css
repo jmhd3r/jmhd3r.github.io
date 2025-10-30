@@ -1,4 +1,6 @@
-/* global styles */
+/* ===========================================
+   GLOBAL STYLES
+   =========================================== */
 body {
   background-color: #93C7AC;
   font-family: Lato, sans-serif;
@@ -7,7 +9,11 @@ body {
   line-height: 1.6;
 }
 
-/* heading */
+@page { margin: 1in; }
+
+/* ===========================================
+   HEADINGS
+   =========================================== */
 h1, h2, h3 {
   font-family: 'Playfair Display', serif;
   color: #14532D;
@@ -18,10 +24,14 @@ h1 { font-size: 42px; }
 h2 { font-size: 28px; }
 h3 { font-size: 22px; }
 
-/* paragraph */
+/* ===========================================
+   PARAGRAPHS
+   =========================================== */
 p { font-size: 20px; }
 
-/* hero section */
+/* ===========================================
+   HERO SECTION
+   =========================================== */
 .hero {
   background-color: #14532D;
   text-align: center;
@@ -39,7 +49,9 @@ p { font-size: 20px; }
   color: #ffffff;
 }
 
-/* cta button */
+/* ===========================================
+   BUTTONS
+   =========================================== */
 .cta-btn {
   display: inline-block;
   padding: 12px 24px;
@@ -52,7 +64,9 @@ p { font-size: 20px; }
 }
 .cta-btn:hover { background-color: #8f523e; }
 
-/* section heading helper */
+/* ===========================================
+   SECTION HEADINGS
+   =========================================== */
 .section-heading {
   font-size: 1.6rem;
   margin-top: 20px;
@@ -61,7 +75,9 @@ p { font-size: 20px; }
   text-align: left;
 }
 
-/* resume link button for about page */
+/* ===========================================
+   RESUME LINK BUTTON
+   =========================================== */
 .pdf-link {
   display: inline-block;
   padding: 10px 22px;
@@ -74,7 +90,9 @@ p { font-size: 20px; }
   font-weight: 700; 
 }
 
-/* education list */
+/* ===========================================
+   EDUCATION LIST
+   =========================================== */
 .education-list {
   list-style-type: square;
   color: #14532D;
@@ -85,7 +103,9 @@ p { font-size: 20px; }
 }
 .education-list li:hover { color: #C97C5D; }
 
-/* skip link */
+/* ===========================================
+   SKIP LINK
+   =========================================== */
 .skip-link {
   position: absolute;
   left: -9999px;
@@ -101,7 +121,9 @@ p { font-size: 20px; }
   z-index: 1000;
 }
 
-/* layout */
+/* ===========================================
+   PAGE LAYOUT
+   =========================================== */
 main {
   max-width: 900px;
   margin: 1.5rem auto;
@@ -109,10 +131,11 @@ main {
 }
 footer { margin-top: 30px; }
 
-/* widen only the reflection page to fit 3 columns */
+/* ===========================================
+   REFLECTION PAGE LAYOUT
+   =========================================== */
 .reflection-page main { max-width: 1100px; }
 
-/* 3-column layout for the first three sections */
 .reflection-columns {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -120,22 +143,24 @@ footer { margin-top: 30px; }
   margin: 20px 0;
 }
 
-/* stack to one column on smaller screens */
 @media (max-width: 900px) {
   .reflection-columns {
     grid-template-columns: 1fr;
   }
 }
 
-/* box model wrapper (no max-width here so columns can fit) */
 .reflection-box {
   background-color: #F7F8F5;
   border: 2px solid #14532D;
   border-radius: 12px;
   padding: 20px;
+  box-shadow:
+    0 6px 16px rgba(0, 0, 0, 0.12),
+    0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
-/* drop cap on first paragraph */
+.reflection-box h2 { color: #C97C5D; }
+
 .reflection-box p:first-of-type::first-letter {
   font-size: 2.2em;
   font-family: 'Playfair Display', serif;
@@ -145,20 +170,14 @@ footer { margin-top: 30px; }
   line-height: 1;
 }
 
-/* indent other paragraphs */
 .reflection-box p:not(:first-of-type) {
   text-indent: 1.5em;
 }
 
-/* reflection section headings use accent color */
-.reflection-box h2 { color: #C97C5D; }
-
-/* full-width goals section spacing and max width align */
 .reflection-goals {
   margin: 20px 0 30px;
 }
 
-/* reflection banner image (keeps your existing look) */
 .banner-img {
   width: 100%;
   max-height: 250px;
@@ -166,28 +185,12 @@ footer { margin-top: 30px; }
   border: 2px solid #14532D; 
   border-radius: 12px;
   margin-bottom: 1rem;
+  object-position: 20% 70%;
 }
 
-/* keep lower part in view (book usually near bottom) */
-.banner-img { object-position: center 80%; }
-
-/* or: */
-.banner-img { object-position: center bottom; }
-
-/* or if the book is left side: */
-.banner-img { object-position: 20% 70%; }
-
-/* widen the reflection page only */
 .reflection-page main {
   max-width: 1200px;
   padding: 0 1.5rem;
-}
-
-/* stronger shadow + more spacing so it's visible */
-.reflection-box {
-  box-shadow:
-    0 6px 16px rgba(0, 0, 0, 0.12),
-    0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
 .reflection-columns {
@@ -195,38 +198,28 @@ footer { margin-top: 30px; }
 }
 
 .banner-bg {
-  height: 320px;                 /* adjust to taste */
+  height: 320px;
   border: 2px solid #14532D;
   border-radius: 12px;
   margin-bottom: 1rem;
-  background-image: url("../webcontent/reflection.jpg"); /* or "webcontent/..." */
-  background-size: cover;        /* fill the box */
-  background-position: center 80%; /* keep the book in view */
+  background-image: url("../webcontent/reflection.jpg");
+  background-size: cover;
+  background-position: center 80%;
   background-repeat: no-repeat;
 }
 
-/* first letter of first paragraph */
-.reflection-box p:first-of-type::first-letter {
-  font-size: 2.2em;
-  font-family: 'Playfair Display', serif;
-  color: #C97C5D;
-  float: left;
-  padding-right: 6px;
-  line-height: 1;
-}
-
-/* indent all other paragraphs */
-.reflection-box p:not(:first-of-type) {
-  text-indent: 1.5em;
-}
-
+/* ===========================================
+   NAVIGATION LINKS
+   =========================================== */
 .nav-links a:link { color: #14532D; }
 .nav-links a:hover { color: #C97C5D; text-decoration: none; }
 
 html { scroll-behavior: smooth; }          
 :target { scroll-margin-top: 100px; }     
 
-/* Image and Video Styling */
+/* ===========================================
+   MEDIA CARD STYLING
+   =========================================== */
 .media-card {
   background: #ffffff20;
   border-radius: 1rem;
@@ -235,19 +228,16 @@ html { scroll-behavior: smooth; }
   margin: 1rem 0;
   text-align: center;
 }
-
 .media-card img {
   max-width: 100%;
   height: auto;
   border-radius: .75rem;
   transition: transform .25s ease, box-shadow .25s ease;
 }
-
 .media-card img:hover {
   transform: scale(1.02);
   box-shadow: 0 12px 30px rgba(0,0,0,.12);
 }
-
 .responsive-video {
   width: 100%;
   height: auto;
@@ -256,7 +246,9 @@ html { scroll-behavior: smooth; }
   background: #000;
 }
 
-/* === Video and Resume side-by-side layout === */
+/* ===========================================
+   VIDEO + RESUME ROW
+   =========================================== */
 .media-row {
   display: flex;
   flex-wrap: wrap;
@@ -264,13 +256,9 @@ html { scroll-behavior: smooth; }
   gap: 2rem;
   margin: 2rem 0;
 }
-
-/* video card */
 .media-row .media-card {
   flex: 1 1 400px;
 }
-
-/* resume box beside video */
 .resume-box {
   flex: 1 1 300px;
   background: #ffffff20;
@@ -279,25 +267,20 @@ html { scroll-behavior: smooth; }
   box-shadow: 0 8px 22px rgba(0,0,0,.08);
   text-align: center;
 }
-
 .resume-box h3 {
   margin-top: 0;
   font-family: 'Playfair Display', serif;
   color: #14532D;
 }
-
-/* button reuse */
 .resume-box .pdf-link {
   background-color: #C97C5D;
   border: none;
   color: #fff;
 }
-
 .resume-box .pdf-link:hover {
   background-color: #14532D;
 }
 
-/* stack vertically on smaller screens */
 @media (max-width: 768px) {
   .media-row {
     flex-direction: column;
@@ -305,12 +288,76 @@ html { scroll-behavior: smooth; }
   }
 }
 
-.media-card img.headshot-img {
-  width: 260px !important;   
-  max-width: 90% !important;
-  height: auto !important;
+/* ===========================================
+   HEADSHOT IMAGE
+   =========================================== */
+.headshot-img {
+  width: min(350px, 90%);
+  height: auto;
   display: block;
-  margin: 0.75rem auto 1rem;
+  margin-inline: auto;
   border-radius: 0.75rem;
-  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
 }
+
+/* Hide name on screen */
+.print-name {
+  display: none;
+}
+
+/* ===========================================
+   PRINT QUERY 
+   =========================================== */
+@media print {
+  header, nav, figure, figcaption, img, video,
+  .logo, .headshot, .media-row, .media-card, .resume-box,
+  .pdf-link, .resume-link, .quote, h2, h3 {
+    display: none !important;
+  }
+
+  * {
+    color: #000 !important;
+    background: none !important;
+    font-family: "Times New Roman", Georgia, serif !important;
+    page-break-inside: avoid;
+    box-sizing: border-box;
+  }
+
+  html, body { margin: 0; }
+
+  body {
+    font-size: 12pt;
+    line-height: 1.4;
+  }
+
+  main, section, article, .container, .content, .wrapper {
+    width: auto !important;
+    max-width: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  main, footer { display: block !important; }
+
+  .print-name {
+    display: block !important;
+    font-size: 18pt;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+  }
+
+  p { margin-bottom: 0.7em; }
+
+  ul, ol { margin: 0.6em 0 1em 1.2em; }
+
+  footer {
+    font-size: 10pt;
+    border-top: 1px solid #000;
+    padding-top: 0.5em;
+    text-align: left;
+  }
+}
+
+
+
+
+
