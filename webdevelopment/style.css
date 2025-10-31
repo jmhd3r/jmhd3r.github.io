@@ -460,6 +460,8 @@ html { scroll-behavior: smooth; }
   cursor: pointer;
 }
 
+.btn-submit:hover { background-color: #8f523e; }
+
 .form-hint {
   margin-top: 0.5rem;
   font-size: 0.9rem;
