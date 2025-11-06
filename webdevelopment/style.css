@@ -561,9 +561,9 @@ html { scroll-behavior: smooth; }
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
-  justify-content: center;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  justify-content: flex-start;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .resume h3 {
@@ -604,4 +604,9 @@ html { scroll-behavior: smooth; }
 .education h3,
 .resume h3 {
   margin-top: 0;
+}
+
+/* Education list spacing */
+.education .education-list {
+  margin-top: .5rem;
 }
