@@ -1,4 +1,6 @@
-/* header and logo */
+/* =========================================
+   HEADER + LOGO
+   ========================================= */
 header {
   position: sticky;
   top: 0;
@@ -20,7 +22,10 @@ header nav { margin-left: auto; }
   display: block;
 }
 
-/* navigation layout */
+
+/* =========================================
+   MAIN NAVIGATION LINKS
+   ========================================= */
 .nav-links {
   list-style: none;
   display: flex;
@@ -30,7 +35,6 @@ header nav { margin-left: auto; }
   flex-wrap: wrap;
 }
 
-/* link styles */
 .nav-links a {
   position: relative;
   text-decoration: none;
@@ -42,7 +46,7 @@ header nav { margin-left: auto; }
   transition: color 0.25s ease, outline-color 0.25s ease;
 }
 
-/* hover underline + color (no background block) */
+/* hover underline */
 .nav-links a::after {
   content: "";
   position: absolute;
@@ -50,7 +54,7 @@ header nav { margin-left: auto; }
   bottom: 0.15rem;
   width: 0;
   height: 2px;
-  background-color: #C97C5D; 
+  background-color: #C97C5D;
   transition: width 0.25s ease;
 }
 
@@ -64,7 +68,7 @@ header nav { margin-left: auto; }
   width: 100%;
 }
 
-/* current page state (works with class or aria-current) */
+/* active page indicator */
 .nav-links a.active,
 .nav-links a[aria-current="page"] {
   color: #C97C5D;
@@ -75,58 +79,31 @@ header nav { margin-left: auto; }
   width: 100%;
 }
 
-/* strong keyboard focus without shifting layout */
-.nav-links a:focus-visible {
-  outline: 3px solid #14532D;   
-  outline-offset: 3px;
-}
-
-/* high-contrast / forced colors fallback */
-@media (forced-colors: active) {
-  .nav-links a::after { background: CanvasText; }
-  .nav-links a:focus-visible { outline: 3px solid CanvasText; }
-}
-
-/* respect users who prefer reduced motion */
-@media (prefers-reduced-motion: reduce) {
-  * { transition: none !important; }
-}
-
-/* mobile layout */
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    text-align: center;
-    gap: 0.75rem;
-    padding: 1rem;
-  }
-
-  .logo { max-height: 80px; }
-
-  .nav-links {
-    flex-direction: column;
-    gap: 0.75rem;
-    margin-top: 0.25rem;
-    align-items: center;
-  }
-
-  .nav-links a {
-    padding: 0.6rem 0.25rem;
-  }
-}
-
+/* keyboard focus */
 .nav-links a:focus-visible {
   outline: 3px solid #14532D;
   outline-offset: 3px;
 }
 
 
-/* parent list item */
-.dropdown {
-  position: relative;
+/* =========================================
+   ACCESSIBILITY + REDUCED MOTION
+   ========================================= */
+@media (forced-colors: active) {
+  .nav-links a::after { background: CanvasText; }
+  .nav-links a:focus-visible { outline: 3px solid CanvasText; }
 }
 
-/* hide submenu by default */
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}
+
+
+/* =========================================
+   DROPDOWN MENU (DESKTOP)
+   ========================================= */
+.dropdown { position: relative; }
+
 .dropdown-menu {
   display: none;
   position: absolute;
@@ -140,10 +117,10 @@ header nav { margin-left: auto; }
   padding: 0.5rem 0;
   margin: 0;
   z-index: 1000;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.15), 0 1px 3px rgba(0,0,0,0.08);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15), 
+              0 1px 3px rgba(0,0,0,0.08);
 }
 
-/* submenu links */
 .dropdown-menu li a {
   display: block;
   padding: 0.5rem 1rem;
@@ -153,31 +130,21 @@ header nav { margin-left: auto; }
   font-size: 1rem;
 }
 
-/* show submenu on hover */
 .dropdown:hover .dropdown-menu,
 .dropdown:focus-within .dropdown-menu {
   display: block;
 }
 
-/* submenu link hover color */
 .dropdown-menu li a:hover,
 .dropdown-menu li a:focus {
   background-color: #C97C5D;
   color: #fff;
 }
 
-/* highlight current page */
-.nav-links a[aria-current="page"] {
-  color: #C97C5D;
-}
 
-/* keyboard focus outline */
-.nav-links a:focus-visible {
-  outline: 3px solid #14532D;
-  outline-offset: 3px;
-}
-
-/* mobile adjustments */
+/* =========================================
+   MOBILE DROPDOWN FORMAT (STACKED)
+   ========================================= */
 @media (max-width: 768px) {
   .dropdown { width: 100%; }
   .dropdown-menu {
@@ -188,6 +155,10 @@ header nav { margin-left: auto; }
   }
 }
 
+
+/* =========================================
+   HAMBURGER ICON (HIDDEN ON DESKTOP)
+   ========================================= */
 .hamburger {
   display: none;
   font-size: 2rem;
@@ -195,21 +166,17 @@ header nav { margin-left: auto; }
   padding: 0.25rem 0.5rem;
 }
 
+
+/* =========================================
+   MOBILE NAVIGATION (SHOW HAMBURGER)
+   ========================================= */
 @media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    text-align: left;
-    gap: 0.75rem;
-    padding: 1rem;
-  }
 
   .hamburger {
     display: block;
-    align-self: flex-end;
   }
 
   nav .nav-links {
     display: none;
   }
 }
-
