@@ -187,3 +187,16 @@ header nav { margin-left: auto; }
     margin-top: 0.25rem;
   }
 }
+
+@media (max-width: 768px) {
+
+  /* Show hamburger */
+  .hamburger {
+    display: block;
+  }
+
+  /* Hide the full navigation menu */
+  nav .nav-links {
+    display: none;
+  }
+}

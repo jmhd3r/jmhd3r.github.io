@@ -610,3 +610,12 @@ html { scroll-behavior: smooth; }
 .education .education-list {
   margin-top: .5rem;
 }
+
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 10px;
+}
+
+
