@@ -200,10 +200,17 @@ header nav { margin-left: auto; }
   /* Show hamburger */
   .hamburger {
     display: block;
+    align-self: flex-end;
+    margin-right: 0.5rem;
   }
 
   /* Hide the full navigation menu */
   nav .nav-links {
     display: none;
   }
+}
+
+header {
+  flex-direction: column;
+  text-align: center;
 }
