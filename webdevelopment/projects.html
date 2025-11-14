@@ -1,0 +1,160 @@
+<!--
+  Name: Jasmine Hill
+  Date: 11/14/2025
+  File: projects.html
+  Description: Project page
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta information -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Page title -->
+  <title>Projects | Jasmine Hill</title>
+
+  <!-- Fonts and external stylesheets -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="nav.css">
+  <link rel="shortcut icon" type="image/x-icon" href="../webcontent/media/favicon.ico">
+</head>
+
+<body>
+  <!-- Header section -->
+  <header>
+    <img src="../webcontent/media/logo.png" alt="Jasmine Hill Logo" class="logo">
+
+    <button class="hamburger" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="dropdown">
+          <a href="projects.html" class="dropdown-toggle" aria-haspopup="true" aria-current="page">
+            Projects ▾
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="#ticket-office">Ticket Office Supervisor</a></li>
+            <li><a href="#brown-root">Project Management Intern</a></li>
+            <li><a href="#starbucks">Barista – Starbucks</a></li>
+            <li><a href="#pyrography">Pyrography Project</a></li>
+          </ul>
+        </li>
+        <li><a href="reflection.html">Reflection</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main content -->
+  <main>
+    <h1>Projects</h1>
+
+    <div class="projects-layout">
+      <!-- Ticket Office Supervisor -->
+      <section id="ticket-office" class="project-card reflection-box">
+        <h2>Ticket Office Supervisor – Mizzou Athletics</h2>
+        <p>
+          At the Mizzou Athletics ticket office, I supervised student workers and handled event operations. 
+          I trained new employees, handled cash, and worked with customers during busy game days. 
+          This role gave me leadership experience and taught me how to help a team work effectively.
+        </p>
+
+        <figure class="project-artifact">
+          <img src="../webcontent/media/Mizzou Athletics.jpg" alt="Crowd filling the stands at a large stadium.">
+          <figcaption>
+            A stadium crowd that represents the event environment I worked in as a Ticket Office Supervisor for Mizzou Athletics.
+            <br>
+            <small>Photo by Jonathan Ikemura on Unsplash</small>
+          </figcaption>
+        </figure>
+      </section>
+
+      <!-- Brown & Root Internship -->
+      <section id="brown-root" class="project-card reflection-box">
+        <h2>Project Management Intern – Brown &amp; Root Industrial Services</h2>
+        <p>
+          As a project management intern, I assisted with project documentation and communication. 
+          A lot of my work was keeping schedules updated, working in Excel, and communicating between the office, the contractor, and the field. 
+          This gave me a better understanding of how projects operate from start to finish and how valuable open communication is.
+        </p>
+        <figure class="project-artifact">
+          <img src="../webcontent/media/Gantt Chart.jpg" 
+               alt="Construction project Gantt chart showing the general sequence and duration of major build tasks.">
+          <figcaption>
+            A construction timeline I created to represent the generalized sequence and duration of major build activities, 
+            similar to the scheduling and coordination work I supported during my internship at Brown &amp; Root.
+          </figcaption>
+        </figure>
+      </section>
+
+      <!-- Starbucks Barista -->
+      <section id="starbucks" class="project-card reflection-box">
+        <h2>Barista – Starbucks</h2>
+        <p>
+          I currently work as a barista at Starbucks, where I’ve learned how to handle a fast-paced environment while working as part of a team. 
+          This job has taught me to adapt quickly, manage multiple responsibilities at once, and stay calm during busy rushes. 
+          It has also helped me build strong communication skills with both customers and coworkers, which connects well to future roles in operations or project management.
+        </p>
+
+        <figure class="project-artifact">
+          <img src="../webcontent/media/Starbucks Drink.jpg" alt="Starbucks drink">
+          <figcaption>
+            A coffee drink representing the fast-paced and customer-focused work I do as a barista.
+            <br>
+            <small>Photo by Dushawn Jovic on Unsplash</small>
+          </figcaption>
+        </figure>
+      </section>
+
+      <!-- Pyrography Project -->
+      <section id="pyrography" class="project-card reflection-box">
+        <h2>Creative Project – Pyrography</h2>
+        <p>
+          I enjoy pyrography, which is a form of wood-burning art. 
+          I create designs on wooden slabs, and the process requires patience, focus, and attention to detail. 
+          This project is very different from my academic and work experiences because there isn’t one “right” answer. 
+          Every piece turns out unique, and that has taught me to slow down, be patient, and step away from perfectionism. 
+          Pyrography gives me a creative outlet and shows another side of me beyond school and work.
+        </p>
+
+        <figure class="project-artifact">
+          <img src="../webcontent/media/Pyrography.jpg" alt="Pyrography wood-burning artwork that says Book Dragon on a wood slice.">
+          <figcaption>
+            One of my pyrography pieces, showing the detailed wood-burning work that gives me a creative outlet outside of school and work.
+          </figcaption>
+        </figure>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>
+      <img src="../webcontent/media/phone.png" alt="Phone icon"> (417) 592-0189<br>
+      <img src="../webcontent/media/email.png" alt="Email icon"> jmhd3r@missouri.edu
+    </p>
+    <p class="copyright">&copy; 2025 Jasmine Hill</p>
+  </footer>
+
+  <!-- Hamburger script -->
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (hamburger && navLinks) {
+      hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+      });
+    }
+  </script>
+</body>
+</html>

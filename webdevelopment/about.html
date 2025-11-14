@@ -1,0 +1,147 @@
+<!--
+  Name: Jasmine Hill
+  Date: 11/14/2025
+  File: about.html
+  Description: About page 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta information -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Jasmine Hill</title>
+  <link rel="shortcut icon" type="image/x-icon" href="../webcontent/media/favicon.ico">
+
+  <!-- Fonts and styles -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="nav.css">
+</head>
+
+<body>
+  <!-- Header section -->
+  <header>
+    <img src="../webcontent/media/logo.png" alt="Jasmine Hill Logo" class="logo">
+
+    <button class="hamburger" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" aria-current="page">About</a></li>
+        <li class="dropdown">
+          <a href="projects.html" class="dropdown-toggle" aria-haspopup="true">
+            Projects ▾
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="projects.html#ticket-office">Ticket Office Supervisor</a></li>
+            <li><a href="projects.html#brown-root">Project Management Intern</a></li>
+            <li><a href="projects.html#starbucks">Barista – Starbucks</a></li>
+            <li><a href="projects.html#pyrography">Pyrography Project</a></li>
+          </ul>
+        </li>
+        <li><a href="reflection.html">Reflection</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main content area -->
+  <main class="about-grid container">
+
+    <!-- Row 1: image left, bio right -->
+    <section class="intro card">
+      <figure class="intro-image media-card">
+        <img
+          src="../webcontent/media/headshot.jpg"
+          alt="Professional headshot of Jasmine Hill against a neutral background"
+          width="800" height="1000" loading="lazy">
+        <figcaption>Hi, nice to meet you!</figcaption>
+      </figure>
+
+      <div class="intro-bio">
+        <h1 class="print-name">Jasmine Hill</h1>
+        <h2>About Me</h2>
+
+        <h3>Bio</h3>
+        <p>Hello, my name is Jasmine Hill, and I am a senior at the University of Missouri.
+          I plan to graduate in May 2026 with a Bachelor of General Studies, concentrating
+          in mathematics, industrial engineering, and engineering. My degree path has
+          strengthened my problem-solving skills and taught me how to look at systems
+          from different perspectives.</p>
+
+        <p>I have gained a lot from my work experience during college. At the Mizzou
+          Athletics ticket office, I worked as a supervisor, which helped me grow in
+          leadership and customer service. My internship with Brown &amp; Root Industrial
+          Services gave me project management experience and showed me how important
+          communication is for keeping projects on track. My current role as a Starbucks
+          barista has helped me learn teamwork and flexibility in a fast-paced environment.</p>
+
+        <p>Outside of school and work, I enjoy pyrography and reading. These creative hobbies
+          push me to be more patient and less focused on perfect answers, since creativity
+          looks different every time.</p>
+      </div>
+    </section>
+
+    <!-- Row 2: separate sections under intro -->
+    <section class="info-grid">
+      <!-- Education -->
+      <section class="education card">
+        <h3>Education Overview</h3>
+        <p><strong>Bachelor of General Studies</strong>, University of Missouri — <em>expected May 2026</em></p>
+        <ul class="education-list">
+          <li>Three components in mathematics, industrial engineering, and engineering</li>
+          <li>Upper-level coursework in engineering statistics, systems simulation, and ergonomics</li>
+          <li>Dean’s Honor Roll — Fall 2022, Spring 2023, Fall 2024</li>
+          <li>Capstone through Industrial Engineering 4910 (project management internship)</li>
+        </ul>
+      </section>
+
+      <!-- Resume -->
+      <section class="resume card">
+        <h3>My Resume</h3>
+        <p>You can view or download my professional resume below.</p>
+
+        <a href="../webcontent/media/hill_resume.pdf" class="pdf-link" target="_blank" rel="noopener">
+          Download My Resume (PDF)
+        </a>
+
+        <figure class="media-card resume-video">
+          <video class="responsive-video" controls preload="metadata" poster="../webcontent/media/headshot.jpg">
+            <source src="../webcontent/media/hill_resume.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <figcaption>Resume introduction video</figcaption>
+        </figure>
+      </section>
+    </section>
+
+  </main>
+
+  <!-- Footer section -->
+  <footer class="site-footer">
+    <p>
+      <img src="../webcontent/media/phone.png" alt="Phone icon"> (417) 592-0189<br>
+      <img src="../webcontent/media/email.png" alt="Email icon"> jmhd3r@missouri.edu
+    </p>
+    <p class="copyright">&copy; 2025 Jasmine Hill</p>
+  </footer>
+
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (hamburger && navLinks) {
+      hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+      });
+    }
+  </script>
+</body>
+</html>

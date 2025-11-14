@@ -1,0 +1,187 @@
+/* =========================================
+   HEADER + LOGO
+   ========================================= */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #93C7AC;
+  padding: 0.75rem 2rem;
+  border-bottom: 2px solid #14532D;
+}
+
+header nav { margin-left: auto; }
+
+.logo {
+  max-height: 110px;
+  width: auto;
+  height: auto;
+  display: block;
+}
+
+
+/* =========================================
+   MAIN NAVIGATION LINKS
+   ========================================= */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  position: relative;
+  text-decoration: none;
+  font-family: 'Lato', sans-serif;
+  color: #14532D;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 0.5rem 0.25rem;
+  transition: color 0.25s ease, outline-color 0.25s ease;
+}
+
+/* hover underline */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0.15rem;
+  width: 0;
+  height: 2px;
+  background-color: #C97C5D;
+  transition: width 0.25s ease;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+  color: #C97C5D;
+}
+
+.nav-links a:hover::after,
+.nav-links a:focus::after {
+  width: 100%;
+}
+
+/* active page indicator */
+.nav-links a.active,
+.nav-links a[aria-current="page"] {
+  color: #C97C5D;
+}
+
+.nav-links a.active::after,
+.nav-links a[aria-current="page"]::after {
+  width: 100%;
+}
+
+/* keyboard focus */
+.nav-links a:focus-visible {
+  outline: 3px solid #14532D;
+  outline-offset: 3px;
+}
+
+
+/* =========================================
+   ACCESSIBILITY + REDUCED MOTION
+   ========================================= */
+@media (forced-colors: active) {
+  .nav-links a::after { background: CanvasText; }
+  .nav-links a:focus-visible { outline: 3px solid CanvasText; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}
+
+
+/* =========================================
+   DROPDOWN MENU (DESKTOP)
+   ========================================= */
+.dropdown { position: relative; }
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 180px;
+  background-color: #F7F8F5;
+  border: 2px solid #14532D;
+  border-radius: 10px;
+  list-style: none;
+  padding: 0.5rem 0;
+  margin: 0;
+  z-index: 1000;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15), 
+              0 1px 3px rgba(0,0,0,0.08);
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #14532D;
+  text-decoration: none;
+  font-family: 'Lato', sans-serif;
+  font-size: 1rem;
+}
+
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li a:hover,
+.dropdown-menu li a:focus {
+  background-color: #C97C5D;
+  color: #fff;
+}
+
+
+/* =========================================
+   MOBILE DROPDOWN FORMAT (STACKED)
+   ========================================= */
+@media (max-width: 768px) {
+  .dropdown { width: 100%; }
+  .dropdown-menu {
+    position: static;
+    min-width: unset;
+    width: 100%;
+    margin-top: 0.25rem;
+  }
+}
+
+
+/* =========================================
+   HAMBURGER ICON (HIDDEN ON DESKTOP)
+   ========================================= */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+}
+
+
+/* =========================================
+   MOBILE NAVIGATION (SHOW HAMBURGER)
+   ========================================= */
+@media (max-width: 768px) {
+
+  .hamburger {
+    display: block;
+    margin-left: auto;
+  }
+
+  header nav {
+    margin-left: 0;
+  }
+
+  nav .nav-links {
+    display: none;
+  }
+}
