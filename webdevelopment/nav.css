@@ -1,6 +1,6 @@
-/* =========================================
+/* ===============================
    HEADER + LOGO
-   ========================================= */
+   =============================== */
 header {
   position: sticky;
   top: 0;
@@ -13,175 +13,149 @@ header {
   border-bottom: 2px solid #14532D;
 }
 
-header nav { margin-left: auto; }
-
 .logo {
   max-height: 110px;
   width: auto;
-  height: auto;
   display: block;
 }
 
+/* ===============================
+   DESKTOP NAVIGATION
+   =============================== */
+nav {
+  margin-left: auto;
+}
 
-/* =========================================
-   MAIN NAVIGATION LINKS
-   ========================================= */
 .nav-links {
   list-style: none;
   display: flex;
   gap: 1.5rem;
+  align-items: center;
   margin: 0;
   padding: 0;
-  flex-wrap: wrap;
+}
+
+.nav-links li {
+  position: relative;
 }
 
 .nav-links a {
-  position: relative;
   text-decoration: none;
-  font-family: 'Lato', sans-serif;
   color: #14532D;
-  font-size: 1.1rem;
-  font-weight: 500;
-  padding: 0.5rem 0.25rem;
-  transition: color 0.25s ease, outline-color 0.25s ease;
-}
-
-/* hover underline */
-.nav-links a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0.15rem;
-  width: 0;
-  height: 2px;
-  background-color: #C97C5D;
-  transition: width 0.25s ease;
+  font-weight: 700;
 }
 
 .nav-links a:hover,
 .nav-links a:focus {
-  color: #C97C5D;
+  text-decoration: underline;
 }
 
-.nav-links a:hover::after,
-.nav-links a:focus::after {
-  width: 100%;
+/* ===============================
+   DROPDOWN (DESKTOP)
+   =============================== */
+.dropdown {
+  position: relative;
 }
 
-/* active page indicator */
-.nav-links a.active,
-.nav-links a[aria-current="page"] {
-  color: #C97C5D;
+.dropdown-toggle {
+  cursor: pointer;
 }
-
-.nav-links a.active::after,
-.nav-links a[aria-current="page"]::after {
-  width: 100%;
-}
-
-/* keyboard focus */
-.nav-links a:focus-visible {
-  outline: 3px solid #14532D;
-  outline-offset: 3px;
-}
-
-
-/* =========================================
-   ACCESSIBILITY + REDUCED MOTION
-   ========================================= */
-@media (forced-colors: active) {
-  .nav-links a::after { background: CanvasText; }
-  .nav-links a:focus-visible { outline: 3px solid CanvasText; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  * { transition: none !important; }
-}
-
-
-/* =========================================
-   DROPDOWN MENU (DESKTOP)
-   ========================================= */
-.dropdown { position: relative; }
 
 .dropdown-menu {
-  display: none;
   position: absolute;
   top: 100%;
   left: 0;
-  min-width: 180px;
-  background-color: #F7F8F5;
-  border: 2px solid #14532D;
-  border-radius: 10px;
   list-style: none;
-  padding: 0.5rem 0;
   margin: 0;
-  z-index: 1000;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.15), 
-              0 1px 3px rgba(0,0,0,0.08);
+  padding: 0.5rem 0;
+  background-color: #93C7AC;
+  border: 1px solid #14532D;
+  border-radius: 8px;
+  display: none;
+  min-width: 220px;
 }
 
-.dropdown-menu li a {
+.dropdown-menu li {
+  padding: 0;
+}
+
+.dropdown-menu a {
   display: block;
-  padding: 0.5rem 1rem;
-  color: #14532D;
-  text-decoration: none;
-  font-family: 'Lato', sans-serif;
-  font-size: 1rem;
+  padding: 0.4rem 0.75rem;
+  white-space: nowrap;
 }
 
-.dropdown:hover .dropdown-menu,
-.dropdown:focus-within .dropdown-menu {
+/* Show dropdown on hover (desktop only) */
+.dropdown:hover .dropdown-menu {
   display: block;
 }
 
-.dropdown-menu li a:hover,
-.dropdown-menu li a:focus {
-  background-color: #C97C5D;
-  color: #fff;
-}
-
-
-/* =========================================
-   MOBILE DROPDOWN FORMAT (STACKED)
-   ========================================= */
-@media (max-width: 768px) {
-  .dropdown { width: 100%; }
-  .dropdown-menu {
-    position: static;
-    min-width: unset;
-    width: 100%;
-    margin-top: 0.25rem;
-  }
-}
-
-
-/* =========================================
-   HAMBURGER ICON (HIDDEN ON DESKTOP)
-   ========================================= */
+/* ===============================
+   HAMBURGER (HIDDEN ON DESKTOP)
+   =============================== */
 .hamburger {
   display: none;
-  font-size: 2rem;
+  flex-direction: column;
+  gap: 4px;
   cursor: pointer;
-  padding: 0.25rem 0.5rem;
+  margin-left: 1rem;
+  border: none;
+  background: none;
+  padding: 0;
 }
 
+.hamburger span {
+  width: 24px;
+  height: 3px;
+  background-color: #14532D;
+  border-radius: 999px;
+}
 
-/* =========================================
-   MOBILE NAVIGATION (SHOW HAMBURGER)
-   ========================================= */
-@media (max-width: 768px) {
+/* ===============================
+   MOBILE NAVIGATION
+   =============================== */
+@media (max-width: 700px) {
 
+  header {
+    flex-wrap: wrap;
+    padding: 0.5rem 1rem;
+  }
+
+  /* Show hamburger on mobile */
   .hamburger {
-    display: block;
-    margin-left: auto;
+    display: flex;
   }
 
-  header nav {
-    margin-left: 0;
+  /* Hide nav links by default on mobile */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #93C7AC;
+    border-top: 1px solid #14532D;
+    padding: 0.5rem 0 0.75rem;
   }
 
-  nav .nav-links {
+  /* Show nav when .show is toggled by JS */
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li {
+    text-align: center;
+    padding: 0.35rem 0;
+  }
+
+  /* Hide dropdown in mobile view */
+  .dropdown-menu {
+    display: none !important;
+    position: static;
+    border: none;
+    background: transparent;
+    min-width: 0;
+  }
+
+  .dropdown:hover .dropdown-menu {
     display: none;
   }
 }
