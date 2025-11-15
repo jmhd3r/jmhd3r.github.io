@@ -117,13 +117,28 @@ nav {
 @media (max-width: 700px) {
 
   header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     flex-wrap: wrap;
     padding: 0.5rem 1rem;
   }
 
-  /* Show hamburger on mobile */
+  /* Make nav take full width below logo + hamburger */
+  nav {
+    width: 100%;
+    order: 2;
+  }
+
+  .logo {
+    flex-shrink: 0;
+  }
+
+  /* Show hamburger on mobile, keep it on the far right */
   .hamburger {
     display: flex;
+    margin-left: auto;
+    order: 1;
   }
 
   /* Hide nav links by default on mobile */
@@ -134,6 +149,7 @@ nav {
     background-color: #93C7AC;
     border-top: 1px solid #14532D;
     padding: 0.5rem 0 0.75rem;
+    margin-top: 0.5rem;
   }
 
   /* Show nav when .show is toggled by JS */
@@ -159,3 +175,4 @@ nav {
     display: none;
   }
 }
+
