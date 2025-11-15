@@ -98,7 +98,7 @@ nav {
   flex-direction: column;
   gap: 4px;
   cursor: pointer;
-  margin-left: 1rem;
+  margin-left: auto;
   border: none;
   background: none;
   padding: 0;
