@@ -125,7 +125,7 @@ p { font-size: 20px; }
    PAGE LAYOUT
    =========================================== */
 main {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 1.5rem auto;
   padding: 0 1rem;
 }
@@ -687,7 +687,6 @@ html { scroll-behavior: smooth; }
 /* Table base */
 .bookshelf-table table {
   width: 100%;
-  min-width: 650px;
   border-collapse: collapse;
   border: 1.5px solid #14532D;
   background-color: #ffffff;
@@ -744,7 +743,7 @@ html { scroll-behavior: smooth; }
 /* Simple responsiveness */
 @media (max-width: 600px) {
   .bookshelf-table table {
-    min-width: 500px;
+    min-width: 100px;
   }
 
   .bookshelf-table th,
@@ -770,4 +769,14 @@ html { scroll-behavior: smooth; }
 
 .bookshelf-table {
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+/* Smaller headshot on mobile */
+@media (max-width: 600px) {
+  .intro-image img,
+  .headshot-img {
+    max-width: 240px;
+    margin-inline: auto;
+    height: auto;
+  }
 }
