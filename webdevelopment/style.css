@@ -61,6 +61,11 @@ p { font-size: 20px; }
   color: #ffffff;
 }
 
+.hero h1,
+.hero p {
+  color: #ffffff !important;
+}
+
 /* Hero image card */
 .hero-image {
   margin: 0;
