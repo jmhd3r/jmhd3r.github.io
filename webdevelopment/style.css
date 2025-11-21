@@ -33,21 +33,64 @@ p { font-size: 20px; }
    HERO SECTION
    =========================================== */
 .hero {
-  background-color: #14532D;
+  position: relative;
+  width: 100%;
+  min-height: 65vh;
+  background-image: url("../webcontent/media/hero image.JPG");
+  background-size: cover;
+  background-position: center 65%;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(20, 83, 45, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
   text-align: center;
-  padding: 100px 20px;
-  color: #fff;
-}
-.hero h1 {
-  font-family: 'Playfair Display', serif;
-}
-.hero p {
-  font-family: 'Lato', sans-serif;
-  font-size: 1.2rem;
-  max-width: 700px;
-  margin: 0 auto 30px;
+  width: min(800px, 90%);
+  padding: 3rem 1.5rem;
   color: #ffffff;
 }
+
+.hero-content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.2rem, 3vw + 1rem, 3rem);
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.hero-content p {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.1rem;
+  max-width: 40rem;
+  margin: 0 auto 1.7rem;
+  color: #ffffff;
+}
+
+@media (max-width: 700px) {
+  .hero {
+    min-height: 55vh;
+    background-position: center 75%;
+  }
+
+  .hero-content {
+    padding: 2.5rem 1.25rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+}
+
 
 /* ===========================================
    BUTTONS
