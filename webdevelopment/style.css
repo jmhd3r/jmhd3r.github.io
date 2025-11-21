@@ -33,9 +33,19 @@ p { font-size: 20px; }
    HERO SECTION
    =========================================== */
 .hero {
+  padding: 140px 20px;
+  text-align: center;
   color: #ffffff;
-  padding: 3rem 1.5rem 3.5rem;
+  background-image: url("../webcontent/media/hero image.JPG");
+  background-size: cover;
+  background-position: center 60%;
+  background-repeat: no-repeat;
 }
+
+.hero-overlay {
+  background: transparent;
+}
+
 
 .hero-inner {
   max-width: 1100px;
