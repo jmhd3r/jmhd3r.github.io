@@ -26,8 +26,9 @@ h3 { font-size: 22px; }
 
 /* Custom styles for all <h1> and <h2> elements */
 h1, h2 {
-  letter-spacing: 1px;
-  text-shadow: 1px 1px 3px #93C7AC;
+  letter-spacing: 1.5px;
+  text-shadow: 2px 2px 6px rgba(20, 83, 45, 0.25);
+  font-family: 'Playfair Display', serif;
 }
 
 /* ===========================================
@@ -800,17 +801,20 @@ html { scroll-behavior: smooth; }
 
 /* Footer icon hover animation */
 .footer-icon {
-  width: 32px;
-  height: 32px;
-  transition: transform 0.3s ease, filter 0.3s ease;
+  width: 28px;
+  height: 28px;
+  margin-right: 0.4rem;
+  transition: transform 0.35s ease, filter 0.35s ease;
 }
 
 .footer-icon:hover {
-  transform: scale(1.15);
-  filter: drop-shadow(0 0 6px #C97C5D);
+  transform: scale(1.25) translateY(-3px);
+  filter: drop-shadow(0 0 8px #C97C5D);
 }
 
 /* Custom font from Google Fonts applied to site */
 .custom-font-section {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.15rem;
+  line-height: 1.6;
 }
