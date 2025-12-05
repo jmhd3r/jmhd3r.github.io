@@ -793,7 +793,7 @@ html { scroll-behavior: smooth; }
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 2px;
-  text-align: center;
+  text-align: left;
   margin-bottom: 1rem;
   color: #14532D;
 }
