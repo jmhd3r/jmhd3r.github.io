@@ -779,7 +779,6 @@ html { scroll-behavior: smooth; }
   border: none;
 }
 
-
 .bookshelf-table figcaption {
   margin-top: 0.5rem;
 }
@@ -801,7 +800,7 @@ html { scroll-behavior: smooth; }
 .bookshelf-intro.custom-font-section::first-letter {
   font-size: 2.5rem;
   float: left;
-  padding-right: 6px;
+  padding-right: 0px;
   line-height: 1;
   font-weight: 600;
   color: #C97C5D;
